@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OG Learn Home</title>
+  <link rel="stylesheet" href="/Hackathon/CSS/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#" class="logo" aria-label="EcoLearn Home">OG Learn</a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/Hackathon/HTML/home.html" class="active" aria-label="Home">Home</a></li>
+        <li><a href="/Hackathon/HTML/Lessons.html" aria-label="Lessons">Lessons</a></li>
+        <li><a href="/Hackathon/HTML/challenges.html" aria-label="Challenges">Challenges</a></li>
+        <li><a href="/Hackathon/HTML/quizzes.html" aria-label="Quizzes">Quizzes</a></li>
+        <li><a href="/Hackathon/HTML/Community.html" aria-label="Community">Community</a></li>
+        <li><a href="/Hackathon/HTML/profile.html" aria-label="Profile">Profile</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Assuming user is logged in; replace with login button if not -->
+        <a href="/Hackathon/HTML/profile.html" style="text-decoration: none;"><div  class="user-avatar" aria-label="User  Profile" onclick="toggleDropdown()">U</div></a>
+        <button onclick="logout()" aria-label="Log Out" >Log Out</button>
+      </div>
+
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="welcomeimage">
+ <main class="main-content" role="main" aria-label="OG Learn Home Page">
+    <big><h1>Welcome to OG Learn!</h1></big>
+    <p>Embark on an interactive journey to learn about environmental issues, complete challenges, earn eco-points, and make a real difference. Start your adventure today!</p>
+    <!-- Add more content like featured challenges, quick stats, etc. -->
+  </main>
+  </div>
+
+<div class="start-learning">
+  <h1> START LEARNING </h1>
+</div>
+
+
+<div class="homepagebg2">
+<div class="start-learning-cards1">
+
+<a href="/Hackathon/HTML/learnanything.html" class="learnwhatyouwant"><div >            
+  <div><h2>Learn What You Want!</h2></div>
+  </div></a>
+
+
+  <a href="/Hackathon/HTML/Lessons.html" class="Lessons"><div >            
+  <div><h2>Lessons</h2></div>
+  </div></a>
+
+
+  <a href="/Hackathon/HTML/challenges.html" class="challenges"><div >
+<div><h2>Challenges</h2></div>
+  </div></a>
+
+
+
+
+
+</div>
+
+
+<div class="start-learning-cards2">
+
+    <a href="/Hackathon/HTML/quizzes.html" class="Quizzes"><div  >
+<div><h2>Quizzes</h2></div>
+  </div></a>
+
+  <a href="/Hackathon/HTML/Community.html" class="Community"><div >
+<div><h2>Community</h2></div>
+  </div></a>
+
+
+  <a href="/Hackathon/HTML/profile.html" class="Profile"><div >
+<div><h2>Profile</h2></div>
+  </div></a>
+
+
+</div>
+</div>
+
+  <!-- Sample Home Page Content -->
+ 
+
+  <script>
+    // Toggle Mobile Menu
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      const hamburger = document.getElementById('hamburger');
+      menu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    }
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navMenu').classList.remove('active');
+        document.getElementById('hamburger').classList.remove('active');
+      });
+    });
+
+    // Simulate active link highlighting (e.g., for Home)
+    document.querySelector('.nav-menu a[href="#"]').classList.add('active');
+
+    // Placeholder functions
+    function toggleDropdown() {
+      alert('User  profile dropdown - Implement your logic here!');
+    }
+
+    function logout() {
+      if (confirm('Are you sure you want to log out?')) {
+        alert('Logging out... Redirecting to login page.');
+        // Redirect to login page
+        window.location.href = 'login.html'; // Replace with actual login page URL
+      }
+    }
+
+    // Keyboard navigation for hamburger
+    document.getElementById('hamburger').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      }
+    });
+  </script>
+  <div>
+  <footer class="Footer">
+
+    <button class="button" role="button"><i class="fa-regular fa-envelope" ><a href="#"></a></i></button>
+    <button class="button"role="button"><i class="fa-brands fa-linkedin"></i></a></i></button>
+    <button class="button" role="button"><i class="fa-brands fa-square-github"></i><a href="#"></a></i></button>
+
+    <p>© 2025 Your Name. All rights reserved.</p>
+
+  </footer>
+  </div>
+  <a href="/Hackathon/HTML/learnanything.html">Learn from youtube</a>
+</body>
+</html>

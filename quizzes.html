@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quizzes - OG Learn</title>
+  <link rel="stylesheet" href="/Hackathon/CSS/quizzes.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/Hackathon/HTML/Home.html" class="logo">OG Learn</a>
+      <ul class="nav-menu">
+        <li><a href="/Hackathon/HTML/Home.html">Home</a></li>
+        <li><a href="/Hackathon/HTML/Lessons.html">Lessons</a></li>
+        <li><a href="/Hackathon/HTML/Challenges.html">Challenges</a></li>
+        <li><a href="/Hackathon/HTML/Quizzes.html" class="active">Quizzes</a></li>
+        <li><a href="/Hackathon/HTML/Community.html">Community</a></li>
+        <li><a href="/Hackathon/HTML/profile.html">Profile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Quizzes Section -->
+  <section class="quizzes">
+    <h1>OG Quizzes</h1>
+    <p>Test your knowledge and earn eco-points!</p>
+
+    <div class="quiz-container" id="quizContainer">
+      
+      <!-- Question 1 -->
+      <div class="quiz-card">
+        <h2>1. Which of the following is a renewable energy source?</h2>
+        <ul>
+          <li><button onclick="checkAnswer(this, true)">Solar Energy</button></li>
+          <li><button onclick="checkAnswer(this, false)">Coal</button></li>
+          <li><button onclick="checkAnswer(this, false)">Petrol</button></li>
+          <li><button onclick="checkAnswer(this, false)">Natural Gas</button></li>
+        </ul>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="quiz-card">
+        <h2>2. Which material is most commonly recycled?</h2>
+        <ul>
+          <li><button onclick="checkAnswer(this, false)">Plastic Bags</button></li>
+          <li><button onclick="checkAnswer(this, true)">Paper</button></li>
+          <li><button onclick="checkAnswer(this, false)">Styrofoam</button></li>
+          <li><button onclick="checkAnswer(this, false)">Rubber</button></li>
+        </ul>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="quiz-card">
+        <h2>3. How much of the Earth’s surface is covered by water?</h2>
+        <ul>
+          <li><button onclick="checkAnswer(this, false)">50%</button></li>
+          <li><button onclick="checkAnswer(this, false)">60%</button></li>
+          <li><button onclick="checkAnswer(this, true)">70%</button></li>
+          <li><button onclick="checkAnswer(this, false)">80%</button></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="score-board">
+      <h2>Your Score: <span id="score">0</span></h2>
+      <button onclick="resetQuiz()">Restart Quiz</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="Footer">
+    <p>© 2025 OG Learn. All rights reserved.</p>
+  </footer>
+
+  <script src="/java/quizzes.js"></script>
+</body>
+</html>

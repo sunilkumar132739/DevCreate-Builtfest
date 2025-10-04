@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OG Learn Home</title>
+  <link rel="stylesheet" href="/Hackathon/CSS/lessons.css">
+  <link rel="stylesheet" href="/Hackathon/CSS/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#" class="logo" aria-label="EcoLearn Home">OG Learn</a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/Hackathon/HTML/home.html" class="active" aria-label="Home">Home</a></li>
+        <li><a href="/Hackathon/HTML/Lessons.html" aria-label="Lessons">Lessons</a></li>
+        <li><a href="/Hackathon/HTML/challenges.html" aria-label="Challenges">Challenges</a></li>
+        <li><a href="/Hackathon/HTML/quizzes.html" aria-label="Quizzes">Quizzes</a></li>
+        <li><a href="/Hackathon/HTML/Community.html" aria-label="Community">Community</a></li>
+        <li><a href="/Hackathon/HTML/profile.html" aria-label="Profile">Profile</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Assuming user is logged in; replace with login button if not -->
+        <div class="user-avatar" aria-label="User  Profile" onclick="toggleDropdown()">U</div>
+        <button onclick="logout()" aria-label="Log Out" >Log Out</button>
+      </div>
+
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+ 
+
+  <!-- Lessons Section -->
+  <section class="lessons">
+    <h1>Available Lessons</h1>
+    <div class="lesson-cards">
+      
+      <div class="lesson-card">
+        <i class="fa-solid fa-leaf lesson-icon"></i>
+        <h2>Introduction to Environment</h2>
+        <p>Learn the basics of our planet’s ecosystems and why sustainability matters.</p>
+        <a href="https://ebooks.inflibnet.ac.in/geop08/chapter/chapter-1/"><button class="start-btn" onclick="startLesson('intro')">Start Lesson</button>
+      </div></a>
+
+      <div class="lesson-card">
+        <i class="fa-solid fa-recycle lesson-icon"></i>
+        <h2>Recycling & Waste Management</h2>
+        <p>Understand how recycling works and how you can reduce waste effectively.</p>
+        <a href="https://www.kelvinindia.in/blog/importance-of-recycling-to-waste-management/"><button class="start-btn" onclick="startLesson('recycling')">Start Lesson</button>
+      </div></a>
+
+      <div class="lesson-card">
+        <i class="fa-solid fa-solar-panel lesson-icon"></i>
+        <h2>Renewable Energy</h2>
+        <p>Explore how solar, wind, and hydro power are shaping the future of energy.</p>
+        <button class="start-btn" onclick="startLesson('energy')">Start Lesson</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="Footer">
+    <p>© 2025 OG Learn. All rights reserved.</p>
+  </footer>
+
+  <script src="/java/lessons.js"></script>
+</body>
+</html>

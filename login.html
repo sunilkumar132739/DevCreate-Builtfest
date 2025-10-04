@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OG Learning-Login</title>
+  <link rel="stylesheet" href="/Hackathon/CSS/login.css">
+   <link rel="icon" href="images/page logo.png" type="images">
+
+</head>
+<body>
+  <div class="login-container" role="main" aria-label="Login to EcoLearn platform">
+    <h2>Login</h2>
+    <form id="loginForm" novalidate>
+      <input type="text" id="username" name="username" placeholder="Username or Email" aria-label="Username or Email" required />
+      <div id="userError" class="error-message">Please enter your username or email.</div>
+
+      <input type="password" id="password" name="password" placeholder="Password" aria-label="Password" required minlength="6" />
+      <div id="passError" class="error-message">Password must be at least 6 characters.</div>
+
+      <button type="submit" aria-label="Log in to EcoLearn" ><a href="home.html">Log In</a></button>
+    </form>
+    <div class="options">
+      <a href="#" tabindex="0">Forgot Password?</a>
+      <a href="#" tabindex="0">Sign Up</a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const username = document.getElementById('username');
+    const password = document.getElementById('password');
+    const userError = document.getElementById('userError');
+    const passError = document.getElementById('passError');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let valid = true;
+
+      if (!username.value.trim()) {
+        userError.style.display = 'block';
+        valid = false;
+      } else {
+        userError.style.display = 'none';
+      }
+
+      if (password.value.length < 6) {
+        passError.style.display = 'block';
+        valid = false;
+      } else {
+        passError.style.display = 'none';
+      }
+
+      if (valid) {
+        // Simulate login success with animation
+        form.querySelector('button').textContent = 'Logging in...';
+        form.querySelector('button').disabled = true;
+
+        setTimeout(() => {
+          alert('Welcome to OG-learning!'); // Replace with actual login logic
+          form.querySelector('button').textContent = 'Log In';
+          form.querySelector('button').disabled = false;
+          form.reset();
+        }, 1500);
+      }
+    });
+  </script>
+</body>
+</html>

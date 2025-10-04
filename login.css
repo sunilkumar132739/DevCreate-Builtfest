@@ -1,0 +1,114 @@
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #a8e063, #56ab2f);
+    background-image: url(images/login\ page\ backgound\ .jpg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #2c3e50;
+    }
+
+    .login-container {
+      background: #ffffffdd;
+      padding: 2.5rem 3rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      width: 350px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .login-container::before {
+      content: "🌿";
+      font-size: 6rem;
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      opacity: 0.1;
+      animation: floatLeaf 6s ease-in-out infinite;
+    }
+    .login-container a {
+        text-decoration: none;
+        color: rgb(34, 30, 30);
+
+    }
+
+    @keyframes floatLeaf {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(10px) rotate(15deg); }
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding: 0.75rem 1rem;
+      border: 2px solid #5cce27;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #a8e063;
+      outline: none;
+      box-shadow: 0 0 8px #a8e063aa;
+    }
+
+    button {
+      background-color: #56ab2f;
+      color: white;
+      border: none;
+      padding: 0.85rem 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #a8e063;
+    }
+
+    .options {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      color: #2c3e50cc;
+    }
+
+    .options a {
+      color: #2c3e50cc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .options a:hover {
+      color: #56ab2f;
+    }
+
+    .error-message {
+      color: #e74c3c;
+      font-size: 0.9rem;
+      margin-top: -0.5rem;
+      margin-bottom: 0.5rem;
+      display: none;
+    }

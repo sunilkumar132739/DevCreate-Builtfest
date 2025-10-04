@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile - OG Learn</title>
+  <link rel="stylesheet" href="/Hackathon/CSS/profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/Hackathon/HTML/Home.html" class="logo">OG Learn</a>
+      <ul class="nav-menu">
+        <li><a href="/Hackathon/HTML/Home.html">Home</a></li>
+        <li><a href="/Hackathon/HTML/Lessons.html">Lessons</a></li>
+        <li><a href="/Hackathon/HTML/Challenges.html">Challenges</a></li>
+        <li><a href="/Hackathon/HTML/Quizzes.html">Quizzes</a></li>
+        <li><a href="/Hackathon/HTML/Community.html">Community</a></li>
+        <li><a href="/Hackathon/HTML/Profile.html" class="active">Profile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <section class="profile">
+    <div class="profile-header">
+      <img id="profile-pic" src="/Hackathon/assets/default-avatar.png" alt="User Avatar">
+      <h2 id="profile-name">John Doe</h2>
+      <p id="profile-email">johndoe@example.com</p>
+      <button onclick="editProfile()">Edit Profile</button>
+    </div>
+
+    <div class="profile-stats">
+      <h3>Stats</h3>
+      <div class="stats-cards">
+        <div class="stat-card">
+          <i class="fa-solid fa-book"></i>
+          <p>Lessons Completed: <span id="lessonsCompleted">12</span></p>
+        </div>
+        <div class="stat-card">
+          <i class="fa-solid fa-trophy"></i>
+          <p>Challenges Won: <span id="challengesWon">5</span></p>
+        </div>
+        <div class="stat-card">
+          <i class="fa-solid fa-star"></i>
+          <p>Quizzes Passed: <span id="quizzesPassed">18</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="achievements">
+      <h3>Achievements</h3>
+      <ul id="achievement-list">
+        <li><i class="fa-solid fa-medal"></i> Eco Beginner</li>
+        <li><i class="fa-solid fa-leaf"></i> Green Warrior</li>
+        <li><i class="fa-solid fa-recycle"></i> Plastic-Free Hero</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="Footer">
+    <p>© 2025 OG Learn. All rights reserved.</p>
+  </footer>
+
+  <!-- Edit Profile Modal -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Edit Profile</h2>
+      <label>Name:</label>
+      <input type="text" id="editName">
+      <label>Email:</label>
+      <input type="email" id="editEmail">
+      <label>Profile Picture:</label>
+      <input type="file" id="editPic" accept="image/*">
+      <button onclick="saveProfile()">Save</button>
+    </div>
+  </div>
+
+  <script src="/java/profile.js"></script>
+</body>
+</html>

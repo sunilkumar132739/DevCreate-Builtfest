@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Community - OG Learn</title>
+  <link rel="stylesheet" href="/Hackathon/CSS/community.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/Hackathon/HTML/Home.html" class="logo">OG Learn</a>
+      <ul class="nav-menu">
+        <li><a href="/Hackathon/HTML/Home.html">Home</a></li>
+        <li><a href="/Hackathon/HTML/Lessons.html">Lessons</a></li>
+        <li><a href="/Hackathon/HTML/Challenges.html">Challenges</a></li>
+        <li><a href="/Hackathon/HTML/Quizzes.html">Quizzes</a></li>
+        <li><a href="/Hackathon/HTML/Community.html" class="active">Community</a></li>
+        <li><a href="/Hackathon/HTML/profile.html">Profile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Community Section -->
+  <section class="community">
+    <h1>Community Forum</h1>
+    <p>Share your thoughts, ask questions, and connect with others!</p>
+
+    <!-- Post Form -->
+    <div class="post-form">
+      <textarea id="postInput" placeholder="What's on your mind?" rows="3"></textarea>
+      <button onclick="addPost()">Post</button>
+    </div>
+
+    <!-- Posts will appear here -->
+    <div id="postsContainer" class="posts-container"></div>
+  </section>
+
+  <footer class="Footer">
+    <p>© 2025 OG Learn. All rights reserved.</p>
+  </footer>
+
+  <script src="/java/Community.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenges - OG Learn</title>
+  <link rel="stylesheet" href="/Hackathon/CSS/challenges.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo" aria-label="EcoLearn Home">OG Learn</a>
+
+      <ul class="nav-menu">
+        <li><a href="/Hackathon/HTML/Home.html">Home</a></li>
+        <li><a href="/Hackathon/HTML/Lessons.html">Lessons</a></li>
+        <li><a href="/Hackathon/HTML/Challenges.html" class="active">Challenges</a></li>
+        <li><a href="/Hackathon/HTML/quizzes.html">Quizzes</a></li>
+        <li><a href="/Hackathon/HTML/Community.html">Community</a></li>
+        <li><a href="/Hackathon/HTML/profile.html">Profile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Challenges Section -->
+  <section class="challenges">
+    <h1>Eco Challenges</h1>
+    <p>Complete challenges, earn points, and make a real difference!</p>
+
+    <div class="challenge-cards">
+      
+      <div class="challenge-card">
+        <i class="fa-solid fa-bottle-water challenge-icon"></i>
+        <h2>Plastic-Free Day</h2>
+        <p>Avoid using single-use plastics for a whole day. Track your success!</p>
+        <button class="start-btn" onclick="joinChallenge('plastic')">Join Challenge</button>
+      </div>
+
+      <div class="challenge-card">
+        <i class="fa-solid fa-bicycle challenge-icon"></i>
+        <h2>Green Commute</h2>
+        <p>Use eco-friendly transport (cycle, walk, or carpool) for the day.</p>
+        <button class="start-btn" onclick="joinChallenge('commute')">Join Challenge</button>
+      </div>
+
+      <div class="challenge-card">
+        <i class="fa-solid fa-droplet challenge-icon"></i>
+        <h2>Save Water</h2>
+        <p>Reduce your daily water usage by 20% — small actions add up!</p>
+        <button class="start-btn" onclick="joinChallenge('water')">Join Challenge</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="Footer">
+    <p>© 2025 OG Learn. All rights reserved.</p>
+  </footer>
+
+  <script src="/java/challenges.js"></script>
+</body>
+</html>
